@@ -11,7 +11,7 @@
       <ul class="list-group">
         <div *ngIf="onlyOdd">
           <li class="list-group-item" *ngFor="let odd of oddNumbers" [ngClass]="{odd: odd % 2 != 0}"
-            [ngStyle]="{backgroundColor: odd % 2 != 0 ? 'GreenYellow' : 'transparent'}">
+            [ngStyle]="{backgroundColor: odd % 2 != 0 ? 'grey' : 'transparent'}">
             {{ odd }}
           </li>
         </div>
