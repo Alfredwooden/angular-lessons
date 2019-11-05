@@ -18,4 +18,15 @@ export class ShoppingListService {
     this.ingredients.push(ingredient);
     this.ingredientsChanged.emit(this.ingredients.slice());
   }
+
+  addIngredients(ingredients: Ingredient[]) {
+    // for (let ingredient of ingredients) {
+    //   this.addIngredient(ingredient);
+    // }
+
+    // ... <-- This is a spread operator, and it will spread all the ingredients into single ingredient
+    this.ingredients.push(...ingredients);
+    // We provide a copy of the ingredients
+    this.ingredientsChanged.emit(this.ingredients.slice());
+  }
 }
